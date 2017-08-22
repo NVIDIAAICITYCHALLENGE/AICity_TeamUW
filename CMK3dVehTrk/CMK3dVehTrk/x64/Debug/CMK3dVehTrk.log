@@ -1,0 +1,96 @@
+﻿Build started 8/22/2017 1:20:54 AM.
+     1>Project "C:\Users\admin\Desktop\CMK3dVehTrk\CMK3dVehTrk\CMK3dVehTrk.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "x64\Debug\CMK3dVehTrk.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "x64\Debug\CMK3dVehTrk.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt src\BasicBgSub.cpp src\DeformableModel.cpp src\FgObjInfo.cpp src\IniFile.cpp src\KalmanFilter.cpp src\KernelTracker.cpp src\LogTool.cpp src\Segmentation.cpp src\ShapeFitting.cpp src\Tracker.cpp src\Tracking.cpp src\VehicleShapeFitting.cpp
+         VehicleShapeFitting.cpp
+     1>src\VehicleShapeFitting.cpp(21): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+         Tracking.cpp
+     1>src\Tracking.cpp(2355): warning C4305: '*=' : truncation from 'double' to 'float'
+     1>src\Tracking.cpp(2356): warning C4305: '*=' : truncation from 'double' to 'float'
+     1>src\Tracking.cpp(2357): warning C4305: '*=' : truncation from 'double' to 'float'
+         Tracker.cpp
+         ShapeFitting.cpp
+     1>c:\opencv-2.4.3\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>C:\OpenCV-2.4.3\include\opencv2/legacy/blobtrack.hpp(187): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+     1>C:\OpenCV-2.4.3\include\opencv2/legacy/blobtrack.hpp(256): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(110) : see declaration of 'strcat'
+     1>c:\users\admin\desktop\cmk3dvehtrk\cmk3dvehtrk\src\GeneralDef.h(21): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         Segmentation.cpp
+     1>c:\opencv-2.4.3\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>C:\OpenCV-2.4.3\include\opencv2/legacy/blobtrack.hpp(187): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+     1>C:\OpenCV-2.4.3\include\opencv2/legacy/blobtrack.hpp(256): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(110) : see declaration of 'strcat'
+         LogTool.cpp
+     1>src\LogTool.cpp(13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>src\LogTool.cpp(35): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>src\LogTool.cpp(58): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>src\LogTool.cpp(83): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         KernelTracker.cpp
+         KalmanFilter.cpp
+         IniFile.cpp
+     1>src\IniFile.cpp(57): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>src\IniFile.cpp(87): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>src\IniFile.cpp(235): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(188) : see declaration of 'strncpy'
+     1>src\IniFile.cpp(244): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(188) : see declaration of 'strncpy'
+     1>src\IniFile.cpp(325): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>src\IniFile.cpp(331): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>src\IniFile.cpp(338): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>src\IniFile.cpp(339): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>src\IniFile.cpp(349): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         FgObjInfo.cpp
+         DeformableModel.cpp
+     1>c:\opencv-2.4.3\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>C:\OpenCV-2.4.3\include\opencv2/legacy/blobtrack.hpp(187): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+     1>C:\OpenCV-2.4.3\include\opencv2/legacy/blobtrack.hpp(256): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(110) : see declaration of 'strcat'
+     1>c:\users\admin\desktop\cmk3dvehtrk\cmk3dvehtrk\src\GeneralDef.h(21): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         BasicBgSub.cpp
+         Generating Code...
+     1>c:\users\admin\desktop\cmk3dvehtrk\cmk3dvehtrk\src\kerneltracker.cpp(1819): warning C4700: uninitialized local variable 'boxFinal' used
+       Lib:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\x86_amd64\Lib.exe /OUT:"C:\Users\admin\Desktop\CMK3dVehTrk\x64\Debug\CMK3dVehTrk.lib" /NOLOGO x64\Debug\BasicBgSub.obj
+         x64\Debug\DeformableModel.obj
+         x64\Debug\FgObjInfo.obj
+         x64\Debug\IniFile.obj
+         x64\Debug\KalmanFilter.obj
+         x64\Debug\KernelTracker.obj
+         x64\Debug\LogTool.obj
+         x64\Debug\Segmentation.obj
+         x64\Debug\ShapeFitting.obj
+         x64\Debug\Tracker.obj
+         x64\Debug\Tracking.obj
+         x64\Debug\VehicleShapeFitting.obj
+         CMK3dVehTrk.vcxproj -> C:\Users\admin\Desktop\CMK3dVehTrk\x64\Debug\CMK3dVehTrk.lib
+       FinalizeBuildStatus:
+         Deleting file "x64\Debug\CMK3dVehTrk.unsuccessfulbuild".
+         Touching "x64\Debug\CMK3dVehTrk.lastbuildstate".
+     1>Done Building Project "C:\Users\admin\Desktop\CMK3dVehTrk\CMK3dVehTrk\CMK3dVehTrk.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:16.55
