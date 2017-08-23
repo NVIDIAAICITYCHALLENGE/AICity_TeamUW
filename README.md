@@ -4,6 +4,7 @@ The source code of Track 1 is built upon the original single shot multibox detec
 The source code of Track 2 developed based on the implementation by the honorable graduates from the Information Processing Lab, Dr. Kuan-Hui Lee, who is currently a research scientist at the Toyota Research Institute, 
 and Dr. Chun-Te Chu, who is currently a software development engineer at Microsoft. 
 
+The codes of Track 1 have been tested on NVIDIA DGX station. Dependencies include TensorFlow, NumPy, OpenCV and matplotlib. 
 The codes of Track 2 have been tested on Windows 8.1 x64, Microsoft Visual Studio 2010 - Professional, C++ 11, OpenCV 2.4.3.
 
 ## Introduction
