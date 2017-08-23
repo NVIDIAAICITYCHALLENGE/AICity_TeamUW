@@ -25,6 +25,21 @@ Detailed information of this challenge can be found [here](http://smart-city-con
 Our team is selected as the winning team of Track 2 for the value and innovation of our proposed approach, 
 along with the success of our demonstration. 
 
+### Single Shot MultiBox Detector (SSD) and Multiscale YOLO
+
+SSD has been evaluated on many benchmark datasets, e.g., PASCAL and COCO, which have confirmed its competitive accuracy and computation efficiency in object detection. 
+In Track 1 of the NVIDIA AI City Challenge, our team adopts the VGG-based SSD network to train on the joint datasets of aic480 and aic540. 
+The network is based on a pre-trained model on ImageNet. 
+We set the number of iterations as 200,000 with a batch size of 16. 
+A TensorFlow re-implementation of the original Caffe code is used for this challenge. 
+We use 512 inputs instead of 300 to enhance detection of small objects like traffic lights. 
+
+Since some classes like bus, motorcycle, pedestrian and bicycle have very few instances in the training dataset, we also adopt the pre-trained model from YOLO9000 to help detect such categories. 
+Moreover, a multi-scale testing method is applied in the testing stage to detect far-away small objects. Then we combine the detection results from SSD and YOLO9000 according to ensemble learning. 
+
+The SSD model is described in a [ECCV 2016 paper](https://arxiv.org/pdf/1512.02325.pdf). 
+The YOLO9000 model is described in a [CVPR 2017 paper](https://arxiv.org/pdf/1612.08242.pdf).
+
 ### Constrained Multiple-Kernel (CMK) Vehicle Tracking Based on Deformable 3D Model
 
 Tracking of multiple objects is an important application in AI City geared towards solving salient problems related to safety and congestion in an urban environment. 
@@ -42,6 +57,14 @@ The CMK vehicle tracking framework based on 3D vehicle model is presented by our
 
 ### Track 1
 
+For SSD, a TensorFlow re-implementation of the original Caffe code is adopted for this challenge. 
+The codes are under `ssd-tensorflow/` folder. 
+Dependencies include TensorFlow, NumPy, OpenCV and matplotlib. 
+Please carefully read and follow the instructions at https://github.com/balancap/SSD-Tensorflow for any question.
+
+As for multiscale YOLO, the codes are under `multiscale-yolo-scripts-master/` folder. 
+Please follow the instructions at the GitHub of our team member, Adwin Jahn, for more details: https://github.com/adwin5/multiscale-yolo-scripts.
+
 ### Track 2
 
 Please follow the “How to Build” section in the `ReadMe.pdf` file within the `CMK3dVehTrk/` folder. 
@@ -57,6 +80,18 @@ Please follow the “How to Build” section in the `ReadMe.pdf` file within the
 ## Usage
 
 ### Track 1
+
+Training of SSD: Please follow the training step at https://github.com/balancap/SSD-Tensorflow with your own dataset. 
+Pre-trained SSD model on AIC datasets is provided under the `ssd-tensorflow/checkpoints/` folder. 
+
+To visualize and save the detection results on the pre-trained model, run `detection_demo.ipynb`. 
+Change "ckpt_filename", "path" and "output_dir" into your model directorys, image directory and output directory, respectively. 
+
+A multi-scale testing of YOLO9000 is avaiable in the `multiscale-yolo-scripts-master/` folder. 
+Please follow the instructions at the GitHub of our team member, Adwin Jahn, for more details: https://github.com/adwin5/multiscale-yolo-scripts.
+
+To combine results from SSD and YOLO9000 into one txt file, run `comb_result.py`. 
+You should change "txt_dir1", "txt_dir2" and "img_file" into your own directories, where "txt_dir1" is the txt output from SSD, "txt_dir2" is the txt output from YOLO9000 and "img_file" is the input image.
 
 ### Track 2
 
@@ -134,6 +169,7 @@ Finally, we release the resource using in the tracking system by calling:
 ### Track 1
 
 The details of experimental results of Track 1 can be found on the [challenge website](http://smart-city-conference.com/AICityChallenge/index.html). 
+Some example results are available under the `ssd-tensorflow/` folder as `ex_1.jpg`, `ex_2.jpg` and `ex_3.jpg`.
 
 ### Track 2
 
