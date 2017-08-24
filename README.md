@@ -113,11 +113,11 @@ This is optional. If there’s no ROI image, ROI covers whole image.
 
 The surveillance camera should be well calibrated. The camera parameters file should include camera’s intrinsic parameters and extrinsic parameters, and follow the format as below:
 
-`fx     0    cx    0    fy    cy    0    0    1
+`fx     0    cx    0    fy    cy    0    0    1`
 
-R[0]  R[1]  R[2]  R[3]  R[4]  R[5]  R[6]  R[7]  R[8]
+`R[0]  R[1]  R[2]  R[3]  R[4]  R[5]  R[6]  R[7]  R[8]`
 
-C[0]  C[1]  C[2]`
+`C[0]  C[1]  C[2]`
 
 The file path of the camera parameters is needed to be assign to “InExCamParamPath” within the configuration file.
 
