@@ -74,9 +74,10 @@ Please follow the “How to Build” section in the `ReadMe.pdf` file within the
 2. Install OpenCV v2.1+ package (tested on OpenCV v2.4.3). Or you can extract `OpenCV-2.4.3.zip` to your target directory. 
 3. Open `CMK3dVehTrk.sln`.
 4. Set proper directories for OpenCV headers and libraries in VS2010 (for both projects of “CMK3dVehTrk” and “CMK3dVehTrkAPI” in configurations of both “Release” and “Debug”): Right click on the project name(s) in “Solution Explorer” -> Properties -> Select “Platform” of “x64” instead of “Win32” (If this choice does not exist, create one through the “Solution Platform” on top of the homepage) -> Configuration Properties -> VC++ Directories -> Set “Include Directories” and “Library Directories”. The default is “OpenCV-2.4.3” at the root directory of C drive.
-5. Set the configuration and other inputs in the folder `data/`.
-6. Build and run the program.
-7. The compiled executable file and outputs are saved in the folder `bin/`.
+5. Also, for “CMK3dVehTrkAPI” only (in configurations of both “Release” and “Debug”), change the working directory: Properties -> Configuration Properties -> Debugging -> Command: Change “$(TargetPath)” into “.\bin\$(ProjectName).exe”; Working Directory: Change “$(ProjectDir)” into “.\bin”. The output directory needs to be changed as well: Properties -> Configuration Properties -> Linker -> General -> Output File: Change “$(OutDir)$(TargetName)$(TargetExt)” into “.\bin\$(ProjectName).exe”.
+6. Set the configuration and other inputs in the folder `data/`.
+7. Build and run the program.
+8. The compiled executable file and outputs are saved in the folder `bin/`.
 
 ## Usage
 
