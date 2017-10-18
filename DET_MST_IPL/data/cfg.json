@@ -1,0 +1,74 @@
+{
+  // general information
+  "genInfo": {
+    // path of input video stream
+    "inVdoPth": "./data/vdo.mp4",
+    // path of input frame image, necessary when inVdoTyp = 3
+    "inFrmPth": "./data/frm.jpg",
+    // path of input ROI image
+    "inRoiPth": "./data/roi.jpg",
+    // path of input text file of object detection, necessary when inDetTyp = 0
+    "inDetTxtPth": "./data/det/det.txt",
+    // path of output text file of object detection, necessary when outDetFlg = 1
+    "outDetTxtPth": "./data/det/det.txt",
+    // path of output video file, necessary when outVdoFlg = 1
+    "outVdoPth": "./data/outVdo.avi",
+    // path of folder for output image files, necessary when outImgFlg = 1
+    "outImgFlrPth": "./data/outImg1/",
+    // path of output timestamp text file, necessary when inVdoTyp > 0
+    "outTstpPth": "./data/tstp.txt",
+    // type of input video source: 0: video file; 1: USB camera; 2: IP camera; 3: updating image
+    "inVdoTyp": 0,
+    // type of input detection: 0: text file; 1: online HOG (person only); 2: online YOLO v2
+    "inDetTyp": 2,
+    // flag of output detection results as txt file
+    "outDetFlg": 0,
+    // flag of output video file
+    "outVdoFlg": 0,
+    // flag of output image files
+    "outImgFlg": 0,
+    // flag of selecting ROI image
+    "selRoiFlg": 0,
+    // flag of plotting object detection
+    "pltDetFlg": 1,
+    //! starting frame count to process
+    "procStFrmCnt": 0,
+    //! number of frames to process (-1: till the end of the video source)
+    "procFrmNum": -1,
+    // frame rate of the output video, necessary when outVdoFlg = true and inVdoTyp > 0
+    "outFrmRt": 10.0,
+    // resized video frame height (-1: original size)
+    "rszFrmHei": -1
+  }
+  // object detection
+  "objDet": {
+    // the ratio to resize the original image for human detection, necessary when inDetTyp = 1
+    "detRszRat": 1.0,
+    // threshold of detection score (in percentage), necessary when inDetTyp = 0 or 2
+    "detScrThld": 30.0,
+    // list of object classes, necessary when inDetTyp = 0 or 2
+    "detObjCls": ["person", "bicycle", "car", "motorbike", "bus", "truck", "traffic light"],
+    // list of aspect ratio ranges for object classes, necessary when inDetTyp = 0 or 2
+    "detAspRatRng": [[0.15, 1.0], [0.15, 3.0], [0.15, 6.0], [0.15, 3.0], [0.15, 6.0], [0.15, 6.0], [0.15, 6.0]],
+    // flag of multi-scale testing, necessary when inDetTyp = 1
+    "detMltSclTstFlg": 1,
+    // threshold for the feature distance with SVM classifying plane for HOG human detection, necessary when inDetTyp = 1
+    "detHogHitThld": 0.0,
+    // size of window stride for HOG human detection, necessary when inDetTyp = 1
+    "detHogWinStrdSz": 8,
+    // size of the mock parameter for HOG human detection, necessary when inDetTyp = 1
+    "detHogPadSz": 32,
+    // coefficient of the detection window increase for HOG human detection, necessary when inDetTyp = 1
+    "detHogScl0": 1.05,
+    // coefficient to regulate the similarity threshold for HOG human detection, necessary when inDetTyp = 1
+    "detHogGrpThld": 5,
+    // path of darknet for YOLO v2 detection, necessary when inDetTyp = 2
+    "detYoloDknetPth": "./darknet",
+    // path of data file for YOLO v2 detection, necessary when inDetTyp = 2
+    "detYoloDataPth": "./cfg/coco.data",
+    // path of configuration file for YOLO v2 detection, necessary when inDetTyp = 2
+    "detYoloCfgPth": "./cfg/yolo.cfg",
+    // path of weights file for YOLO v2 detection, necessary when inDetTyp = 2
+    "detYoloWgtPth": "./yolo.weights"
+  }
+}
