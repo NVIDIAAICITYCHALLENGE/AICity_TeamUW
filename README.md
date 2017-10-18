@@ -1,5 +1,5 @@
 # Multiple-Kernel Based Vehicle Tracking Using 3D Deformable Model and Camera Self-Calibration for 2017 IEEE Smart World NVIDIA AI City Challenge
-This repository contains OUR source code of Track 1 and Track 2 for the NVIDIA AI City Challenge.
+This repository contains our source code of Track 1 and Track 2 for the NVIDIA AI City Challenge.
 The source code of Track 1 is built with options of HOG or YOLO v2 object detectors. 
 The source code of Track 2 is developed based on the implementation by the honorable graduates from the Information Processing Lab, Dr. Kuan-Hui Lee, who is currently a research scientist at the Toyota Research Institute, and Dr. Chun-Te Chu, who is currently a software development engineer at Microsoft. 
 
@@ -53,10 +53,10 @@ Under the "./DET_MST_IPL/" folder
 2. "./src/" folder: Header files
 3. "./darknet/" folder: Edited version of Darknet for C++ interaction
 4. "./data/" folder: Example
-   i. "cfg.json": Important configuration parameters in JSON format
-   ii. "roi.jpg": Region of interest (ROI) image
-   iii. "vdo.mp4": Input video source (need to provide)
-   iv. "./det/" folder: Detection results in text file (need to create)
+   - "cfg.json": Important configuration parameters in JSON format
+   - "roi.jpg": Region of interest (ROI) image
+   - "vdo.mp4": Input video source (need to provide)
+   - "./det/" folder: Detection results in text file (need to create)
 
 The output of object detection in text file follows the format below (following the standard of MOTChallenge). 
 
@@ -70,11 +70,11 @@ Under the "./CMK_VEH_TRK_IPL/" folder
 1. "./obj/" folder: Libraries of .cpp files for compilation
 2. "./src/" folder: Header files
 3. "./data/" folder: Example of camera ID 0
-   i. "cam_config.ini": Configuration parameters
-   ii. "roi.jpeg": Region of interest (ROI) image
-   iii. "background.png": Input background image to initialize background subtraction
-   iv. "video.avi": Input video to process
-   v. "InExCamParam.txt": Camera parameters
+   - "cam_config.ini": Configuration parameters
+   - "roi.jpeg": Region of interest (ROI) image
+   - "background.png": Input background image to initialize background subtraction
+   - "video.avi": Input video to process
+   - "InExCamParam.txt": Camera parameters
 
 The text file of camera parameters should include the camera’s intrinsic parameters and extrinsic parameters, and follow the format as follows:
 
@@ -109,10 +109,10 @@ The output 3D vehicle model(s) at each frame are saved in the "./camID/" folder 
 1. Set the corresponding input/output paths in the configuration file if necessary. 
 2. When running the program, a window called “current frame” will pop up first.
 3. When the ROI image is not selected, an ROI image of the entire frame will be automatically created. If the user wants to select a specified ROI, set “selRoiFlg” to 1. The user can perform 3 choices: 1) press ‘p’ to proceed to the frame that s/he wants to select ROI in, 2) press ‘Esc’ and load the existing ROI image, 3) press ‘s’ to select ROI in the current frame. The process of selecting ROI is described as follows:  
-   i. A new window called “ROI selector” pops out. This should be the current frame that the user proceeds to.
-   ii. Click on the image around the ROI. A blue circle stands for each click and a white line connect two adjacent clicks. Note that in order to make a valid ROI, the last click should be close to the first click, i.e., two blue circles should overlap.
-   iii. After the selection of ROI is done, click “Enter”. A binary mask image that shows the mask for ROI is created. 
-   iv. During ROI selection, if mis-clicking on wrong places, the user can press ‘r’. All the markers will be cleared, and s/he can start over.
+   - A new window called “ROI selector” pops out. This should be the current frame that the user proceeds to.
+   - Click on the image around the ROI. A blue circle stands for each click and a white line connect two adjacent clicks. Note that in order to make a valid ROI, the last click should be close to the first click, i.e., two blue circles should overlap.
+   - After the selection of ROI is done, click “Enter”. A binary mask image that shows the mask for ROI is created. 
+   - During ROI selection, if mis-clicking on wrong places, the user can press ‘r’. All the markers will be cleared, and s/he can start over.
 4. When the detection results are not available, the user can choose to run HOG detector (for person only) or YOLO v2 detector online. For YOLO v2 detector, the user needs to set the threshold for detection score and the object classes of interest. When “detMltSclTstFlg” is set, each frame will be tested in multiple scales and the results are combined through non-maximum suppression, so that more small objects can be detected. As a requirement, follow the steps shown at the terminal to open a new terminal, cd to the directory of “./darknet/” folder and execute the command to set the model for detection. After it is done, press any key to continue. 
 
 ### Track 2
