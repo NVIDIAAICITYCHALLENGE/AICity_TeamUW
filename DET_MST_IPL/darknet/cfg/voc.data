@@ -1,0 +1,6 @@
+classes= 1
+train  = data/soccer/train.txt
+valid  = data/soccer/store.txt
+names = data/voc.names
+backup = backup
+
