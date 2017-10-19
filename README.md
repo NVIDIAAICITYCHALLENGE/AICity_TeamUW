@@ -51,12 +51,12 @@ Under the "./DET_MST_IPL/" folder
 
 1. "./obj/" folder: Libraries of .cpp files for compilation
 2. "./src/" folder: Header files
-3. "./darknet/" folder: Edited version of Darknet for C++ interaction
+3. "./darknet/" folder: Modified version of Darknet for C++ interaction (please download the pre-trained weights from the [blog of the author](https://pjreddie.com/darknet/yolo/))
 4. "./data/" folder: Example
    - "cfg.json": Important configuration parameters in JSON format
    - "roi.jpg": Region of interest (ROI) image
-   - "vdo.mp4": Input video source (need to provide)
-   - "./det/" folder: Detection results in text file (need to create)
+   - "vdo.mp4": Input video source (need to be provided)
+   - "./det/" folder: Where the text file of detection results is saved (need to be created)
 
 The output of object detection in text file follows the format below (following the standard of MOTChallenge). 
 
